@@ -11,9 +11,25 @@
             <h1>🤑 Free moneyy no scam - very easy</h1>
             <form method="POST" action="/test">
                 <label for="email">🥳 Please enter your e-mail</label>
-                <input id="email" type="text" name="email"/>
+                <!-- kan man bruge pattern i email inputet??? -->
+                <input id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
                 <input type="submit">
             </form>
+        <form action="/emails">
+            <input type="submit" value="See all emails" />
+        </form>
+
+        <form method="get" action="/">
+            <input type="submit" value="Get a random email">
+        </form>
+
+        <p th:text ="${oneEmail}"></p>
+
     </section>
+
+
+
+
+
 </body>
 </html>
