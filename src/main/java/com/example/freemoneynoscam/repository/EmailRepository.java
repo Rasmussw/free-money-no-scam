@@ -13,7 +13,7 @@ public class EmailRepository {
         try
         {
             String url = "jdbc:mysql://localhost:3306/test_db";
-            con = DriverManager.getConnection(url,"root","Tumle123");
+            con = DriverManager.getConnection(url,);
             System.out.println("Ok, we have a connection.");
         }
         catch(Exception e)
@@ -31,6 +31,7 @@ public class EmailRepository {
 
         while (rs.next()) {
             emails.add(rs.getString(2));
+
         }
         return emails;
     }
